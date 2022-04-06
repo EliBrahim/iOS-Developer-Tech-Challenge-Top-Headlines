@@ -30,7 +30,7 @@ struct TopHeadlines: Codable {
 
 class IndexInteractor {
 	
-	var delegate: IndexInteractorDelegate?
+	weak var delegate: IndexInteractorDelegate?
 	
 	func getAllTopHeadlines() throws {
 		

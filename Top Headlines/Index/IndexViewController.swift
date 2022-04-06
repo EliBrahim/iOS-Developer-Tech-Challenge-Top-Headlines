@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol IndexViewControllerDelegate {
+protocol IndexViewControllerDelegate: AnyObject {
 	
 	func viewIsReady()
 	func willDisplayCell(_ cell: IndexCollectionViewCell, item: IndexViewData)
@@ -41,7 +41,7 @@ class IndexViewController: UIViewController {
 		return collectionView
 	}()
 	
-	var delegate: IndexViewControllerDelegate?
+	weak var delegate: IndexViewControllerDelegate?
 	var data: [IndexViewData] = []
 	
 	override func viewDidLoad() {

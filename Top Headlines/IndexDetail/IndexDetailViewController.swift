@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol IndexDetailViewControllerDelegate {
+protocol IndexDetailViewControllerDelegate: AnyObject {
 	
 	func viewIsReady()
 }
@@ -26,7 +26,7 @@ struct IndexDetailViewData {
 class IndexDetailViewController: UIViewController {
 	
 	var data: IndexDetailViewData?
-	var delegate: IndexDetailViewControllerDelegate?
+	weak var delegate: IndexDetailViewControllerDelegate?
 	
 	// - Attr Views
 	
